@@ -26,4 +26,19 @@ class PropertyTransactionListView(generic.ListView):
 
 
 
-# Begin lab 10 modifications below...
+# Begin lab 10 modifications below....
+class PropertyTransactionDetailView(generic.DetailView):
+    model = Transaction
+    template_name = 'transactions/detail.html'
+
+
+class PropertyCreateTransaction(generic.CreateView):
+    model = Transaction
+    template_name = "transactions/create.html"
+    fields = ['prop','trans_type']
+    success_url = reverse_lazy('properties:list')
+
+class PropertyUpdateTransaction(generic.UpdateView):
+    model = Transaction
+    template_name = "transactions/edit.html"
+    fields = ['prop','trans_type']

@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: utf-8 --*-
 from __future__ import unicode_literals
 
 from django.db import models
@@ -11,4 +11,4 @@ class Transaction(models.Model):
     prop = models.ForeignKey(Property, related_name='transactions')
     trans_date = models.DateTimeField(auto_now=True)
     trans_type = models.CharField(max_length=64, choices=TRANS_TYPES)
-
+    
