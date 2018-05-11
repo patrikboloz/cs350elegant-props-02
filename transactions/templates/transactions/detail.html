@@ -1,0 +1,12 @@
+{% extends "core/base.html" %}
+{% load humanize %}
+
+{% block content %}
+
+<div>
+  <p>Property Type:{{object.prop}}</p>
+  <p>Transaction Date:{{object.trans_date}}</p>
+  <p>Transaction Type:{{object.trans_type}}</p>
+  
+</div>
+{% endblock content %}
